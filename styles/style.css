@@ -57,6 +57,22 @@ main {
 }
 
 
+/******************/
+/* LOADING SCREEN */
+/******************/
+#loading-screen {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 1920 / 1080 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 1080 / 1920 */
+	z-index: 1;
+}
+
+
 /****************************************************/
 /* FOG (https://codepen.io/braedencraig/pen/dBVKzO) */
 /****************************************************/

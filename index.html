@@ -4,31 +4,34 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Crowned Victory</title>
 
-	<link rel="icon" type="image/png" href="">
+	<link rel="icon" href="media/crowned-victory_favicon.svg" type="image/svg+xml">
 	<link href="styles/style.css" rel="stylesheet">
 </head>
 <body>
 
 	<header>
 		<!-- <menu>
-			<button>
-				<li>
-
-				</li>
-			</button>
+			<li>
+				<button>Hit</button>
+			</li>
+			<li>
+				<button onclick="toggleAudio()">Mute</button>
+			</li>
+			<li>
+				<button>Reset</button>
+			</li>
 		</menu> -->
 		<audio id="myAudio" loop autoplay playsinline>
 			<source src="media/moonlight-sonata-sonate-no-14-1st-movement-ludwig-van-bethoven-12490.mp3" type="audio/mp3">
 			Your browser does not support the audio element.
 		</audio>
-
-		<button onclick="toggleAudio()">Toggle Play/Mute</button>
 	</header>
 
 
 	<main>
+		<div id="loading-screen"></div>
 
 		<div id="foglayer_01" class="fog">
 			<div class="image01"></div>

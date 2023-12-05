@@ -1,10 +1,10 @@
-// var animation = bodymovin.loadAnimation({
-// 	container: document.getElementById('bm'),
-// 	renderer: 'svg',
-// 	loop: true,
-// 	autoplay: true,
-// 	path: 'data.json'
-//   })
+var animation = bodymovin.loadAnimation({
+	container: document.getElementById('loading-screen'),
+	renderer: 'svg',
+	loop: false,
+	autoplay: true,
+	path: '../scripts/loading-screen.json'
+  })
 
 // var animation = bodymovin.loadAnimation({
 // 	container: document.getElementById('bl'),
