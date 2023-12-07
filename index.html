@@ -5,24 +5,32 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Crowned Victory</title>
-
-	<link rel="icon" href="media/crowned-victory_favicon.svg" type="image/svg+xml">
+	<link rel="icon" href="media/crowned-victory_favicon.svg" type="image/svg">
+	<link rel="icon" href="media/crowned-victory_favicon.png" type="image/png">
 	<link href="styles/style.css" rel="stylesheet">
 </head>
 <body>
 
 	<header>
-		<!-- <menu>
+		<menu>
+			<li>
+				<button>Pixar</button>
+			</li>
 			<li>
 				<button>Hit</button>
 			</li>
 			<li>
+				<button>Music</button>
+			</li>
+		</menu>
+		<menu>
+			<li>
 				<button onclick="toggleAudio()">Mute</button>
 			</li>
 			<li>
-				<button>Reset</button>
+				<button type="submit" onClick="refreshPage()">Reset</button>
 			</li>
-		</menu> -->
+		</menu>
 		<audio id="myAudio" loop autoplay playsinline>
 			<source src="media/moonlight-sonata-sonate-no-14-1st-movement-ludwig-van-bethoven-12490.mp3" type="audio/mp3">
 			Your browser does not support the audio element.

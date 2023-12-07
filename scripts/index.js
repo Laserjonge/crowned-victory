@@ -1,9 +1,17 @@
+// var animation = bodymovin.loadAnimation({
+// 	container: document.getElementById('loading-screen'),
+// 	renderer: 'svg',
+// 	loop: false,
+// 	autoplay: true,
+// 	path: 'loading-screen.json'
+//   })
+
 var animation = bodymovin.loadAnimation({
 	container: document.getElementById('loading-screen'),
 	renderer: 'svg',
-	loop: false,
+	loop: true,
 	autoplay: true,
-	path: 'loading-screen.json'
+	path: 'kick.json'
   })
 
 // var animation = bodymovin.loadAnimation({
@@ -14,6 +22,8 @@ var animation = bodymovin.loadAnimation({
 // 	path: 'data2.json'
 // })
 
+
+// MUTE FUNCTION
 function toggleAudio() {
 	var audio = document.getElementById("myAudio");
 
@@ -23,3 +33,9 @@ function toggleAudio() {
 		audio.pause();
 	}
 }
+
+
+// RESET FUNCTION
+function refreshPage(){
+    window.location.reload();
+} 
