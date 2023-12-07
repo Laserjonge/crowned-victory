@@ -11,28 +11,28 @@
 </head>
 <body>
 
-	<header>
+	<header id="draggableElement" id="draggableElementHeader">
 		<menu>
 			<li>
-				<button>Pixar</button>
+				<button id="hammer-button">Pixar</button>
 			</li>
 			<li>
-				<button>Hit</button>
+				<button id="kick-button">Kick</button>
 			</li>
 			<li>
-				<button>Music</button>
+				<button id="music-button">Music</button>
 			</li>
 		</menu>
 		<menu>
 			<li>
-				<button onclick="toggleAudio()">Mute</button>
+				<button id="mute-button">Mute</button>
 			</li>
 			<li>
-				<button type="submit" onClick="refreshPage()">Reset</button>
+				<button id="reset-button">Reset</button>
 			</li>
 		</menu>
 		<audio id="myAudio" loop autoplay playsinline>
-			<source src="media/moonlight-sonata-sonate-no-14-1st-movement-ludwig-van-bethoven-12490.mp3" type="audio/mp3">
+			<!-- <source src="media/moonlight-sonata-sonate-no-14-1st-movement-ludwig-van-bethoven-12490.mp3" type="audio/mp3"> -->
 			Your browser does not support the audio element.
 		</audio>
 	</header>
@@ -40,6 +40,8 @@
 
 	<main>
 		<div id="loading-screen"></div>
+
+		<div id="attack-screen"></div>
 
 		<div id="foglayer_01" class="fog">
 			<div class="image01"></div>

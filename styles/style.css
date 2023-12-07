@@ -24,6 +24,7 @@ html {
 body {
   margin: 0;
   overflow: hidden;
+  /* transform: translate(40%); */
 }
 
 
@@ -68,16 +69,43 @@ main {
 }
 
 
+/*****************/
+/* ATTACK SCREEN */
+/*****************/
+#attack-screen {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%);
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 1920 / 1080 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 1080 / 1920 */
+	/* z-index: 1; */
+	pointer-events: none;
+  /* display: none; */
+}
+
+/* .visible {
+  display: block !important;
+}
+
+.invisible {
+  display: none !important;
+} */
+
+
 /********/
 /* MENU */
 /********/
 header {
 	position: absolute;
-	bottom: 2em;
-	left: 50%;
-	transform: translate(-50%);
+	top: 2.4em;
+	/* left: 10vw; */
+	/* transform: translate(-50%); */
 	display: flex;
 	z-index: 1;
+  cursor: move;
 }
 
 header menu:first-of-type {
@@ -136,14 +164,14 @@ menu:nth-of-type(2) li:first-of-type {
   width: 50%;
 }
 #foglayer_01 {
-  -webkit-animation: foglayer_01_opacity 40s linear infinite, foglayer_moveme 60s linear infinite;
-  -moz-animation: foglayer_01_opacity 40s linear infinite, foglayer_moveme 60s linear infinite;
-  animation: foglayer_01_opacity 40s linear infinite, foglayer_moveme 60s linear infinite;
+  -webkit-animation: foglayer_01_opacity 20s linear infinite, foglayer_moveme 30s linear infinite;
+  -moz-animation: foglayer_01_opacity 20s linear infinite, foglayer_moveme 30s linear infinite;
+  animation: foglayer_01_opacity 20s linear infinite, foglayer_moveme 30s linear infinite;
 }
 #foglayer_02, #foglayer_03 {
-  -webkit-animation: foglayer_02_opacity 84s linear infinite, foglayer_moveme 52s linear infinite;
-  -moz-animation: foglayer_02_opacity 84s linear infinite, foglayer_moveme 52s linear infinite;
-  animation: foglayer_02_opacity 84s linear infinite, foglayer_moveme 52s linear infinite;
+  -webkit-animation: foglayer_02_opacity 42s linear infinite, foglayer_moveme 26s linear infinite;
+  -moz-animation: foglayer_02_opacity 42s linear infinite, foglayer_moveme 26s linear infinite;
+  animation: foglayer_02_opacity 42s linear infinite, foglayer_moveme 26s linear infinite;
 }
 
 /* ---------- Moving Fog ---------- */
@@ -279,4 +307,8 @@ menu:nth-of-type(2) li:first-of-type {
       width: 100%;
     }
   }
+
+
+
+
 
