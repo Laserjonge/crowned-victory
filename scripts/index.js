@@ -3,7 +3,7 @@ var loadAnimation = bodymovin.loadAnimation({
   renderer: "svg",
   loop: false,
   autoplay: true,
-//   path: "loading.json",
+  // path: "loading.json",
 });
 
 var stillAnimation = bodymovin.loadAnimation({
@@ -18,12 +18,54 @@ var hammer = document.getElementById("hammer-button");
 var kick = document.getElementById("kick-button");
 var music = document.getElementById("music-button");
 
+
+//MOVING ICONS
+var hammerAnimation = bodymovin.loadAnimation({
+  container: document.getElementById("hammer-animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "icon-hammer.json",
+});
+
+var kickAnimation = bodymovin.loadAnimation({
+  container: document.getElementById("kick-animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "icon-shoe.json",
+});
+
+var musicAnimation = bodymovin.loadAnimation({
+  container: document.getElementById("music-animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "icon-music.json",
+});
+
+var muteAnim = bodymovin.loadAnimation({
+  container: document.getElementById("mute-animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "icon-mute.json",
+});
+
+var resetAnimation = bodymovin.loadAnimation({
+  container: document.getElementById("reset-animation"),
+  renderer: "svg",
+  loop: true,
+  autoplay: true,
+  path: "icon-reset.json",
+});
+
+
 // HAMMER FUNCTION
-function hammerfunction() {
+function hammerFunction() {
   // Change the animation path to "hammer.json"
   changeAnimationPath("hammer.json");
 }
-
 // Function to change the animation path
 function changeAnimationPath(newPath) {
   stillAnimation.destroy(); // Destroy the current animation instance
@@ -36,13 +78,13 @@ function changeAnimationPath(newPath) {
     path: newPath,
   });
 }
+
 
 // KICK FUNCTION
 function kickFunction() {
   // Change the animation path to "kick.json"
   changeAnimationPath("kick.json");
 }
-
 // Function to change the animation path
 function changeAnimationPath(newPath) {
   stillAnimation.destroy(); // Destroy the current animation instance
@@ -55,13 +97,13 @@ function changeAnimationPath(newPath) {
     path: newPath,
   });
 }
+
 
 // MUSIC FUNCTION
 function musicFunction() {
   // Change the animation path to "music.json"
   changeAnimationPath("loading.json");
 }
-
 // Function to change the animation path
 function changeAnimationPath(newPath) {
   stillAnimation.destroy(); // Destroy the current animation instance
@@ -75,25 +117,12 @@ function changeAnimationPath(newPath) {
   });
 }
 
-hammer.addEventListener("click", hammerfunction);
+hammer.addEventListener("click", hammerFunction);
 kick.addEventListener("click", kickFunction);
 music.addEventListener("click", musicFunction);
 
 
-// MUTE FUNCTION
-var mute = document.getElementById("mute-button");
 
-function toggleAudio() {
-  var audio = document.getElementById("myAudio");
-
-  if (audio.paused) {
-    audio.play();
-  } else {
-    audio.pause();
-  }
-}
-
-mute.addEventListener("click", toggleAudio);
 
 // RESET FUNCTION
 var reset = document.getElementById("reset-button");
@@ -105,6 +134,41 @@ function refreshPage() {
 reset.addEventListener("click", refreshPage);
 
 
+function mute() {
+  changePath("icon-mute.json");
+}
+
+function unmute() {
+  changePath("icon-volume.json");
+}
+
+function changePath(newPath) {
+  muteAnim.destroy();
+  muteAnim = bodymovin.loadAnimation({
+    container: document.getElementById("mute-animation"),
+    renderer: "svg",
+    loop: true,
+    autoplay: true,
+    path: newPath,
+  });
+}
+
+var muteButton = document.getElementById("mute-button");
+
+function toggleAudio() {
+  var audio = document.getElementById("myAudio");
+
+  if (audio.paused) {
+    audio.play();
+    mute();
+    console.log("if");
+  } else {
+    audio.pause();
+    unmute();
+  }
+}
+
+muteButton.addEventListener("click", toggleAudio);
 
 
 
@@ -174,3 +238,5 @@ function dragElement(elmnt) {
 
   // Align the header on window resize
   window.addEventListener('resize', alignHeader);
+
+

@@ -14,25 +14,53 @@
 	<header id="draggableElement" id="draggableElementHeader">
 		<menu>
 			<li>
-				<button id="hammer-button">Pixar</button>
+				<button class="pushable" id="hammer-button">
+					<span class="shadow"></span>
+					<span class="edge edge-green "></span>
+					<span class="front green ">
+					  <div id="hammer-animation"></div>
+					</span>
+				  </button>
 			</li>
 			<li>
-				<button id="kick-button">Kick</button>
+				<button class="pushable" id="kick-button">
+					<span class="shadow"></span>
+					<span class="edge edge-green"></span>
+					<span class="front green">
+						<div id="kick-animation"></div>
+					</span>
+				  </button>
 			</li>
 			<li>
-				<button id="music-button">Music</button>
+				<button class="pushable" id="music-button">
+					<span class="shadow"></span>
+					<span class="edge edge-green"></span>
+					<span class="front green">
+						<div id="music-animation"></div>
+					</span>
+				  </button>
 			</li>
-		</menu>
-		<menu>
 			<li>
-				<button id="mute-button">Mute</button>
+				<button class="pushable" id="mute-button">
+					<span class="shadow"></span>
+					<span class="edge edge-blue"></span>
+					<span class="front blue">
+						<div id="mute-animation"></div>
+					</span>
+				  </button>
 			</li>
 			<li>
-				<button id="reset-button">Reset</button>
+				<button class="pushable" id="reset-button">
+					<span class="shadow"></span>
+					<span class="edge"></span>
+					<span class="front">
+						<div id="reset-animation"></div>
+					</span>
+				  </button>				
 			</li>
 		</menu>
 		<audio id="myAudio" loop autoplay playsinline>
-			<!-- <source src="media/moonlight-sonata-sonate-no-14-1st-movement-ludwig-van-bethoven-12490.mp3" type="audio/mp3"> -->
+			<source src="media/moonlight-sonata-sonate-no-14-1st-movement-ludwig-van-bethoven-12490.mp3" type="audio/mp3">
 			Your browser does not support the audio element.
 		</audio>
 	</header>
