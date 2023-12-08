@@ -102,7 +102,7 @@ function changeAnimationPath(newPath) {
 // MUSIC FUNCTION
 function musicFunction() {
   // Change the animation path to "music.json"
-  changeAnimationPath("loading.json");
+  changeAnimationPath("music.json");
 }
 // Function to change the animation path
 function changeAnimationPath(newPath) {
